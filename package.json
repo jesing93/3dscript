@@ -1,0 +1,25 @@
+{
+  "name": "3dscript",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jesing93/3dscript.git"
+  },
+  "dependencies": {
+    "voxel-engine-stackgl": "^1.1.0",
+    "voxel-flatland": "^0.1.0",
+    "voxel-bedrock": "^1.0.0", 
+    "voxel-plugins": "0.5.0",
+    "voxel-registry": "0.8.3", 
+    "voxel-land": "0.2.3"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.6",
+    "browserify": "^13.0.0"
+  },
+  "scripts": {
+    "start": "beefy index.js:bundle.js --port 8081"
+  },
+  "license": "BSD-3-Clause"
+}
