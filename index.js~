@@ -5,21 +5,24 @@ var createGame = require('voxel-engine-stackgl')({
   pluginLoaders: {
     'voxel-bedrock': require('voxel-bedrock'),
     'voxel-registry': require('voxel-registry'), 
-    'voxel-land': require('voxel-land')
+    'voxel-land': require('voxel-land'),
+    'voxel-reach': require('voxel-reach'),
+    'voxel-mine': require('voxel-mine'),
+    'voxel-harvest': require('voxel-harvest'),
+    'voxel-use': require('voxel-use'),
+    'inventory': require('inventory'),
+    'inventory-window': require('inventory-window'),
+    'itempile': require('itempile'),
+    'voxel-carry': require('voxel-carry'),
+    'voxel-inventory-hotbar': require('voxel-inventory-hotbar'),
+    'voxel-inventory-dialog': require('voxel-inventory-dialog'),
+    'voxel-inventory-crafting': require('voxel-inventory-crafting'),
+    'craftingrecipes': require('craftingrecipes'),
+    'voxel-workbench': require('voxel-workbench')
   },
   pluginOpts: {
     'voxel-engine-stackgl': {generateChunks: false},
-    'game-shell-fps-camera': {position: [0, -50, 0]},
+    'game-shell-fps-camera': {position: [0, -100, 0]},
 
-    'voxel-bedrock': {},
-    'voxel-land': {seed: Math.random()}
+    'voxel-land': {seed: Math.random()}, 
   }});
-
-/*var game = createGame();
-var createPlugins = require('voxel-plugins');
-var plugins = createPlugins(game, {require:require});
-plugins.add('voxel-registry', {});
-plugins.add('voxel-land', {});
-plugins.loadAll();
-var registry = game.plugins.get('voxel-registry');
-Land(game)*/

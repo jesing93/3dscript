@@ -8,7 +8,6 @@
   },
   "dependencies": {
     "voxel-engine-stackgl": "^1.1.0",
-    "voxel-flatland": "^0.1.0",
     "voxel-bedrock": "^1.0.0", 
     "voxel-plugins": "0.5.0",
     "voxel-registry": "0.8.3", 
@@ -21,6 +20,7 @@
     "inventory-window": "2.0.3", 
     "itempile": "2.0.0", 
     "voxel-carry": "1.0.0", 
+    "voxel-modal-dialog": "1.0.1",
     "voxel-inventory-hotbar": "1.0.0", 
     "voxel-inventory-dialog": "3.0.1", 
     "voxel-inventory-crafting": "1.0.0",
