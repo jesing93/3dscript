@@ -1,5 +1,6 @@
 'use strict';
 
+
 var createGame = require('voxel-engine-stackgl')({
   pluginLoaders: {
     'voxel-bedrock': require('voxel-bedrock'),
@@ -11,7 +12,7 @@ var createGame = require('voxel-engine-stackgl')({
     'game-shell-fps-camera': {position: [0, -100, 0]},
 
     'voxel-bedrock': {},
-    'voxel-land': {}
+    'voxel-land': {seed: Math.random()}
   }});
 
 /*var game = createGame();
