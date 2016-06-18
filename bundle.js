@@ -4,6 +4,7 @@
 
 var createGame = require('voxel-engine-stackgl')({
   pluginLoaders: {
+    'voxel-engine-stackgl': require('voxel-engine-stackgl'),
     'voxel-bedrock': require('voxel-bedrock'),
     'voxel-registry': require('voxel-registry'), 
     'voxel-land': require('voxel-land'),
@@ -23,11 +24,25 @@ var createGame = require('voxel-engine-stackgl')({
     'voxel-workbench': require('voxel-workbench')
   },
   pluginOpts: {
-    'voxel-engine-stackgl': {generateChunks: false},
-    'game-shell-fps-camera': {position: [0, -100, 0]},
-
+    'game-shell-fps-camera': {position: [0, -50, 0]},
     'voxel-land': {seed: Math.random()}, 
-  }});
+  }, 
+  generateChunks: false
+  });
+  
+  var game = createGame()
+  var createReach = game.plugins.get('voxel-reach')
+  reach = createReach(game, {reachDistance: 8})
+
+  reach.on('use', function(target) { 
+    if (target)
+      game.createBlock(target.adjacent, 1)
+  })
+
+  reach.on('mining', function(target) { 
+    if (target)
+      game.setBlock(target.voxel, 0)
+  })
 
 },{"craftingrecipes":2,"inventory":12,"inventory-window":3,"itempile":16,"voxel-bedrock":21,"voxel-carry":22,"voxel-engine-stackgl":23,"voxel-harvest":318,"voxel-inventory-crafting":319,"voxel-inventory-dialog":320,"voxel-inventory-hotbar":326,"voxel-land":330,"voxel-mine":349,"voxel-modal-dialog":350,"voxel-reach":360,"voxel-registry":361,"voxel-use":362,"voxel-workbench":363}],2:[function(require,module,exports){
 (function (global){

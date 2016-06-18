@@ -1,5 +1,6 @@
 {
   "name": "3dscript",
+  "description": "A node.js game",
   "version": "0.0.1",
   "main": "index.js",
   "repository": {

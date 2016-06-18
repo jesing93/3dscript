@@ -3,6 +3,7 @@
 
 var createGame = require('voxel-engine-stackgl')({
   pluginLoaders: {
+    'voxel-engine-stackgl': require('voxel-engine-stackgl'),
     'voxel-bedrock': require('voxel-bedrock'),
     'voxel-registry': require('voxel-registry'), 
     'voxel-land': require('voxel-land'),
@@ -22,8 +23,22 @@ var createGame = require('voxel-engine-stackgl')({
     'voxel-workbench': require('voxel-workbench')
   },
   pluginOpts: {
-    'voxel-engine-stackgl': {generateChunks: false},
-    'game-shell-fps-camera': {position: [0, -100, 0]},
-
+    'game-shell-fps-camera': {position: [0, -50, 0]},
     'voxel-land': {seed: Math.random()}, 
-  }});
+  }, 
+  generateChunks: false
+  });
+  
+  var game = createGame()
+  var createReach = game.plugins.get('voxel-reach')
+  reach = createReach(game, {reachDistance: 8})
+
+  reach.on('use', function(target) { 
+    if (target)
+      game.createBlock(target.adjacent, 1)
+  })
+
+  reach.on('mining', function(target) { 
+    if (target)
+      game.setBlock(target.voxel, 0)
+  })

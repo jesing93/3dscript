@@ -20,6 +20,7 @@
     "inventory-window": "2.0.3", 
     "itempile": "2.0.0", 
     "voxel-carry": "1.0.0", 
+    "voxel-modal-dialog": "1.0.1",
     "voxel-inventory-hotbar": "1.0.0", 
     "voxel-inventory-dialog": "3.0.1", 
     "voxel-inventory-crafting": "1.0.0",
