@@ -1,7 +1,8 @@
 {
   "name": "3dscript",
+  "description": "A node.js game",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "bundle.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:jesing93/3dscript.git"
@@ -31,8 +32,12 @@
     "beefy": "^2.1.6",
     "browserify": "^13.0.0"
   },
+  "engine": {
+    "node": "0.12.x"
+  },
   "scripts": {
-    "start": "beefy index.js:bundle.js --port 8081"
+    "preinstall": "npm install -g beefy",
+    "start": "beefy index.js:bundle.js --port 8080"
   },
   "license": "BSD-3-Clause"
 }

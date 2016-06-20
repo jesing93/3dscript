@@ -1,5 +1,5 @@
 'use strict';
-
+var http = require('http');
 
 var createGame = require('voxel-engine-stackgl')({
   pluginLoaders: {
@@ -29,16 +29,18 @@ var createGame = require('voxel-engine-stackgl')({
   generateChunks: false
   });
   
-  var game = createGame();
-  var createReach = game.plugins.get('voxel-reach');
-  reach = createReach(game, {reachDistance: 8});
+  var game = createGame()
+  var createReach = game.plugins.get('voxel-reach')
+  reach = createReach(game, {reachDistance: 8})
 
   reach.on('use', function(target) { 
     if (target)
-      game.createBlock(target.adjacent, 1);
-  });
+      game.createBlock(target.adjacent, 1)
+  })
 
   reach.on('mining', function(target) { 
     if (target)
-      game.setBlock(target.voxel, 0);
+      game.setBlock(target.voxel, 0)
+  })
+  
   });

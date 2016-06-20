@@ -33,7 +33,7 @@
     "browserify": "^13.0.0"
   },
   "scripts": {
-    "start": "beefy index.js:bundle.js --port 8081"
+    "start": "beefy index.js:bundle.js --port 8080"
   },
   "license": "BSD-3-Clause"
 }
