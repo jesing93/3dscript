@@ -1,0 +1,39 @@
+{
+  "name": "3dscript",
+  "description": "A node.js game",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jesing93/3dscript.git"
+  },
+  "dependencies": {
+    "voxel-engine-stackgl": "^1.1.0",
+    "voxel-bedrock": "^1.0.0", 
+    "voxel-plugins": "0.5.0",
+    "voxel-registry": "0.8.3", 
+    "voxel-land": "0.2.3", 
+    "voxel-reach": "0.2.2", 
+    "voxel-mine": "1.0.0", 
+    "voxel-harvest": "1.0.0", 
+    "voxel-use": "1.0.0", 
+    "inventory": "2.0.0", 
+    "inventory-window": "2.0.3", 
+    "itempile": "2.0.0", 
+    "voxel-carry": "1.0.0", 
+    "voxel-modal-dialog": "1.0.1",
+    "voxel-inventory-hotbar": "1.0.0", 
+    "voxel-inventory-dialog": "3.0.1", 
+    "voxel-inventory-crafting": "1.0.0",
+    "craftingrecipes": "2.0.0", 
+    "voxel-workbench": "1.0.0"
+  },
+  "devDependencies": {
+    "beefy": "^2.1.6",
+    "browserify": "^13.0.0"
+  },
+  "scripts": {
+    "start": "beefy index.js:bundle.js --port 8080"
+  },
+  "license": "BSD-3-Clause"
+}
